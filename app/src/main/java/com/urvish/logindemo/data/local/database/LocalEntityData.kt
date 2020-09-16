@@ -13,7 +13,7 @@ class LocalEntityData(context: Context) : BasePersistence(context),
         return null
     }
 
-    override fun saveUserXaccToLocal(xaccData: XaccData) {
-        db!!.loginDao.insertXaccData(xaccData)
+    override fun saveUserXaccToLocal(data: XaccData) {
+        db!!.loginDao.insertData(data)
     }
 }

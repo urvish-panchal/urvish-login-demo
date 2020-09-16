@@ -4,24 +4,24 @@ import android.content.Context
 import androidx.room.Room
 
 abstract class BasePersistence(private val context: Context) {
-    private var database: LocalDatabase? = null
+    private var mDatabase: LocalDatabase? = null
 
     val db: LocalDatabase?
         get() {
-            if (database == null) {
+            if (mDatabase == null) {
                 initDatabase()
             }
-            return database
+            return mDatabase
         }
 
     private fun initDatabase() {
-        database = Room.databaseBuilder(context, LocalDatabase::class.java!!, NAME)
+        mDatabase = Room.databaseBuilder(context, LocalDatabase::class.java, DB_NAME)
             .fallbackToDestructiveMigration()
             .allowMainThreadQueries()
             .build()
     }
 
     companion object {
-        private val NAME = "logintest.db"
+        private val DB_NAME = "MY_LOCAL_DB.db"
     }
 }

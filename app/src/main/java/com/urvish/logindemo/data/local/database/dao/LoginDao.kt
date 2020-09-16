@@ -9,5 +9,5 @@ import com.urvish.logindemo.data.local.database.XaccData
 interface LoginDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertXaccData(xaccData: XaccData): Long
+    fun insertData(data: XaccData): Long
 }

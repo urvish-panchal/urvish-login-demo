@@ -25,8 +25,7 @@ class RemoteLoginEntityData(private val context: Context) : CommonRetrofit<BaseA
                 upstream.subscribeOn(Schedulers.newThread())
                     .observeOn(AndroidSchedulers.mainThread())
             }
-
-        }  //Todo Need to identify API failed Here on error
+        }
     }
 
     override fun postLogin(name: String, password: String): Flowable<Response<ResponseBody>>? {
@@ -34,5 +33,5 @@ class RemoteLoginEntityData(private val context: Context) : CommonRetrofit<BaseA
             .compose(applyServiceTransformer())
     }
 
-    override fun saveUserXaccToLocal(xaccData: XaccData) {}
+    override fun saveUserXaccToLocal(data: XaccData) {}
 }

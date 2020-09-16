@@ -16,6 +16,6 @@ class NetworkInterceptor(private val context: Context) : Interceptor {
         if (NetworkUtils.hasNetwork(context)) {
             return chain.proceed(request)
         }
-        throw NetworkNotFoundException(context.getString(R.string.no_internet))
+        throw NetworkNotFoundException(context.getString(R.string.msg_no_internet))
     }
 }
