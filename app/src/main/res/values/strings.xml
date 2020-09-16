@@ -1,18 +1,12 @@
 <resources>
     <string name="app_name">UrvishLoginDemo</string>
 
-    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="txt_no_network">\"No network connecton available.\"</string>
-    <string name="no_internet">No internet connection</string>
-    <string name="invalid_login">Please enter valid email address</string>
-    <string name="invalid_password">Please enter password</string>
+    <string name="action_login">Login</string>
+
+    <string name="error_username_required">Please enter your username</string>
+    <string name="error_password_required">Please enter your password</string>
+
+    <string name="msg_no_internet">"No network connection available."</string>
 </resources>
