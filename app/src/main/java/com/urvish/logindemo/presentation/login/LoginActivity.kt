@@ -39,6 +39,7 @@ class LoginActivity : BaseActivity() {
             showProgressBar(true)
             loginViewModel.checkValidationAndCallLoginWs(
                 this@LoginActivity,
+                binding,
                 binding.edtUsername.text.toString().trim(),
                 binding.edtPassword.text.toString().trim()
             )
